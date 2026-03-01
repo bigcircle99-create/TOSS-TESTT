@@ -4,6 +4,19 @@
 - `questions.json`: 10 quiz questions with O/X answers and explanations
 - `scoring.js`: Node.js scoring logic
 
+## Preview Web App
+- `../preview/index.html`: O/X 질문 UI
+- `../preview/server.js`: 로컬 프리뷰 서버
+- `../preview/app.js`: 질문 로딩/응답/결과 표시
+
+### Run preview
+
+```bash
+node preview/server.js
+```
+
+Open `http://127.0.0.1:4173`
+
 ## Usage
 
 ```bash

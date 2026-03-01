@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사업 감각 OX 테스트</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel" id="quiz-panel">
+        <header class="panel-head">
+          <p class="eyebrow">TOSS PREVIEW</p>
+          <h1>사업 감각 OX 테스트</h1>
+          <p class="sub">10문항에 O/X로 답하고 사업 감각 점수를 확인하세요.</p>
+        </header>
+
+        <div class="meter-wrap">
+          <div class="meter" id="meter"></div>
+        </div>
+        <p class="meta" id="meta">문항을 불러오는 중...</p>
+
+        <article class="question-card">
+          <p class="question" id="question-text"></p>
+          <div class="actions">
+            <button class="btn ox-o" id="btn-o" type="button">O</button>
+            <button class="btn ox-x" id="btn-x" type="button">X</button>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel hidden" id="result-panel">
+        <header class="panel-head">
+          <p class="eyebrow">RESULT</p>
+          <h2 id="result-title">결과</h2>
+          <p class="sub" id="result-message"></p>
+        </header>
+        <div class="score-box">
+          <p class="score" id="result-score">0점</p>
+          <p class="grade" id="result-grade">등급 -</p>
+        </div>
+        <div id="result-list" class="result-list"></div>
+        <button class="btn restart" id="restart" type="button">다시 풀기</button>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
