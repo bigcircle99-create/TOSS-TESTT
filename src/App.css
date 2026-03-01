@@ -1,42 +1,113 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app {
+  width: min(640px, 100%);
+}
+
+.quiz-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e9ecf2;
+  box-shadow: 0 24px 60px rgba(19, 28, 45, 0.08);
+  padding: 28px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #5e6a86;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+h1 {
+  margin: 8px 0 20px;
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  line-height: 1.2;
+  color: #12151f;
+}
+
+.progress {
+  margin: 0;
+  font-weight: 700;
+  color: #2158ff;
+}
+
+.question {
+  margin: 16px 0 24px;
+  font-size: 1.1rem;
+  color: #1c2230;
+  min-height: 80px;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn {
+  border: 0;
+  border-radius: 12px;
+  min-height: 52px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(29, 44, 70, 0.15);
+}
+
+.btn-o {
+  background: #d9f8e2;
+  color: #045c2a;
+}
+
+.btn-x {
+  background: #ffe1df;
+  color: #85201a;
+}
+
+.result {
+  display: grid;
+  gap: 12px;
+}
+
+.score {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0f1628;
+}
+
+.analysis {
+  margin: 0;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f3f7ff;
+  color: #233252;
+  line-height: 1.45;
+}
+
+.btn-restart {
+  margin-top: 6px;
+  background: #1f54ff;
+  color: #ffffff;
+}
+
+.disclaimer {
+  margin-top: 12px;
   text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 640px) {
+  .quiz-card {
+    padding: 22px;
+    border-radius: 16px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .question {
+    min-height: 92px;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
