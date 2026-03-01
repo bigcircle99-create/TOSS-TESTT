@@ -8,7 +8,7 @@ x# To learn more about how to use Nix to configure your environment
     # pkgs.go
     # pkgs.python311
     # pkgs.python311Packages.pip
-    # pkgs.nodejs_20
+    pkgs.nodejs_20
     # pkgs.nodePackages.nodemon
   ];
   # Sets environment variables in the workspace
@@ -23,16 +23,14 @@ x# To learn more about how to use Nix to configure your environment
     previews = {
       enable = true;
       previews = {
-        # web = {
-        #   # Example: run "npm run dev" with PORT set to IDX's defined port for previews,
-        #   # and show it in IDX's web preview panel
-        #   command = ["npm" "run" "dev"];
-        #   manager = "web";
-        #   env = {
-        #     # Environment variables to set for your server
-        #     PORT = "$PORT";
-        #   };
-        # };
+        web = {
+          command = ["node" "preview/server.js"];
+          manager = "web";
+          env = {
+            PORT = "$PORT";
+            HOST = "0.0.0.0";
+          };
+        };
       };
     };
     # Workspace lifecycle hooks
