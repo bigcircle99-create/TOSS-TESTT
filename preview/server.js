@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const { evaluate } = require('../quiz/scoring');
 
-const HOST = '127.0.0.1';
+const HOST = process.env.HOST || '0.0.0.0';
 const PORT = Number(process.env.PORT || 4173);
 const ROOT = __dirname;
 const QUESTIONS_PATH = path.join(__dirname, '..', 'quiz', 'questions.json');
